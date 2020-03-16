@@ -1,0 +1,192 @@
+body { 
+      background: #f5ece7; /* Цвет фона веб-страницы */
+}  
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+}
+/* Графические банеры*/
+.main {
+  background: url(../img/fon1_0.jpg) no-repeat; 
+}
+.main1 {
+  background: url(../img/fon1_1.jpg) no-repeat; 
+}
+
+.main2 {
+  background: url(../img/fon1_2.jpg) no-repeat; 
+}
+
+.main3 {
+  background: url(../img/fon1_3.jpg) no-repeat; 
+}
+
+.main4 {
+  background: url(../img/fon1_4.jpg) no-repeat; 
+}
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+/* Левое меню*/
+.menu {
+  position: fixed;
+  left: 0;top: 0;
+  z-index: 99;
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8adbb; 
+  transition: 0.5s;
+  transform: translateX(-100%);
+}
+.menu_active {
+  transform: translateX(0%);
+}
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  flex-direction: column;
+}
+.menu-list a {
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #333;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+/* Кнопка меню гамбургер*/
+.menu-btn {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-color: #333;
+  position: absolute;
+  right: -39px;
+  top: 6px;
+  border-radius: 50%;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px; 
+  left: 50%; margin-left: -10px;
+  width: 20px; 
+  height: 2px;
+  background-color: #f5e5e6;
+}
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.3s;
+} 
+.menu-btn span::before {
+  transform: translateY(-5px);
+}
+.menu-btn span::after {
+  transform: translateY(5px);
+}
+.menu-btn_active span::before {
+  transform: rotate(-35deg);
+  width: 10px;
+  transform-origin: left bottom;
+ } 
+ .menu-btn_active span::after {
+  transform: rotate(35deg);
+  width: 10px;
+   transform-origin: left top;
+ }
+.content {
+  transition: 0.5s;
+  position: relative;
+  z-index: 0;
+}
+.content_active {
+  transform: translateX(30%);
+  filter: grayscale(100%) blur(2px);
+}
+/* Текст ссылок */
+a {
+  font-family: Arial, sans-serif;
+  }
+
+/* Текст о дате состояния базы*/
+
+.content-date  {
+    font-style: italic; /* Курсивное начертание */
+    text-align: center;
+    font-size: small; /* Размер шрифта: маленькое */
+}
+
+/* Текст сведений об авторском праве */
+p {
+    font-style: italic; /* Курсивное начертание */
+    text-align: justify;
+    font-size: small; /* Размер шрифта: маленькое */
+}
+/* Горизонтальная линия в конце страницы*/
+hr {
+     box-sizing: content-box;
+     height: 0;
+     overflow: visible;
+}
+/* Поле поиска*/
+.form-search {  /* форма с boxtuffs.com */
+  position: relative;
+  display: inline-block;
+  border: 1px solid #747474;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px #575555, 0 1px 0 #FFF;
+  background-image: linear-gradient(#BCBCBC, #EBEBEB);
+}
+.form-search:before {  /* рамка вокруг формы */
+  position: absolute;
+  content: "";
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  z-index: -1;
+  border-radius: 5px;
+  background: linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B);
+}
+.form-search:focus-within {  /* изменение формы при фокусе */
+  box-shadow: inset 0 1px 1px #46575b, 0 1px 0 #FFF;
+  background: linear-gradient(#f5aec0, #fef8f6);
+}
+.form-search input[type="search"] {  /* поле поиска */
+  width: 60px;
+  height: 32px;
+  line-height: 32px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0 0 0 6px;
+  background: transparent;
+  font: 13px Helvetica, Arial, sans-serif;
+  color: #6E7074;
+  text-shadow: 0 1px 0 #FFF;
+  transition: all .2s ease-out;
+}
+.form-search:focus-within input[type="search"],  /* изменение поля поиска при фокусе */
+.form-search input[type="search"]:focus {
+  width: 160px;
+  color: #25464D;
+}
+.form-search input[type="image"] {  /* картинка лупы */
+  padding: 0;
+  vertical-align: bottom;
+}
