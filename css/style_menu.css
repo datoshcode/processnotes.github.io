@@ -128,7 +128,7 @@ a {
 .content-date  {
     font-style: italic; /* Курсивное начертание */
     text-align: center;
-    font-size: small; /* Размер шрифта: маленькое */
+    font-size: medium; /* Размер шрифта: среднее */
 }
 
 /* Текст сведений об авторском праве */
